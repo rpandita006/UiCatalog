@@ -1,2 +1,3 @@
-from pages.action_sheets import Action
-action_obj = Action()
+from pages.action_sheets import ActionSheet
+
+actions = ActionSheet

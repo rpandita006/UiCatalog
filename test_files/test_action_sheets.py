@@ -1,10 +1,15 @@
 import unittest
-import pages
+from base import *
+from pages import *
 
 
-class Test_case1(unittest.TestCase):
+class ActionsPage(SetUpDriver):
+
     def test_action(self):
-        pages.action_obj.search_field()
+        driver = self.driver
+        ActionPage = ActionSheet(driver)
+        ActionPage.search_field()
+
 
 if __name__ == '__main__':
     unittest.main()
