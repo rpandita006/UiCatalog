@@ -1,3 +1,3 @@
-from base.Page_Base import SetUpDriver
+from base.Page_Test import SetUpDriver
 
 driver_obj = SetUpDriver()

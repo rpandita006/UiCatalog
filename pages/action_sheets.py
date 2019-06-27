@@ -1,13 +1,14 @@
 from time import sleep
-from base import *
 
 
-# This class contains methods to login to the url with the credentials.
-class Action(SetUpDriver):
+class ActionSheet(object):
+
+    def __init__(self, driver):
+        self.driver = driver
+
     def search_field(self):
         print('hello')
         action_ele = self.driver.find_element_by_name("Action Sheets")
-        sleep(2)
         action_ele.click()
         other_ele = self.driver.find_element_by_name("Other")
         sleep(2)
