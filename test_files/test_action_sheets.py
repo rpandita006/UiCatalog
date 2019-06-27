@@ -7,8 +7,8 @@ class ActionsPage(SetUpDriver):
 
     def test_action(self):
         driver = self.driver
-        ActionPage = ActionSheet(driver)
-        ActionPage.search_field()
+        action_page = ActionSheet(driver)
+        action_page.search_field()
 
 
 if __name__ == '__main__':

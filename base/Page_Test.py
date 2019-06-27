@@ -8,7 +8,7 @@ class SetUpDriver(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        print("In SetUp")
+        print('Initializing')
         cls.driver = webdriver.Remote(
             command_executor='http://0.0.0.0:4723/wd/hub',
             desired_capabilities={
@@ -17,5 +17,12 @@ class SetUpDriver(unittest.TestCase):
                 'automationName': 'XCUITest',
                 'bundleID': 'com.demo.UICatalog123',
                 'platformVersion': '12.2',
-                'deviceName': 'iPhone X'
+                'deviceName': 'iPhone X',
+                'useNewWDA': 'true',
+                'waitForQuiescence': 'false'
             })
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        print('Terminating')
+        cls.driver.quit()

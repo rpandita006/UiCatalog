@@ -6,13 +6,18 @@ class ActionSheet(object):
     def __init__(self, driver):
         self.driver = driver
 
+        self.action_ele = self.driver.find_element_by_name("Action Sheets")
+        self.other_ele = self.driver.find_element_by_name("Other")
+        self.choice_ele = self.driver.find_element_by_name("Safe Choice")
+        self.back_ele = self.driver.find_element_by_name("Back")
+
     def search_field(self):
-        print('hello')
-        action_ele = self.driver.find_element_by_name("Action Sheets")
-        action_ele.click()
-        other_ele = self.driver.find_element_by_name("Other")
+        print('In Actions')
+        self.action_ele.click()
         sleep(2)
-        other_ele.click()
-        choice_ele = self.driver.find_element_by_name("Safe Choice")
+        self.other_ele.click()
         sleep(2)
-        choice_ele.click()
+        self.choice_ele.click()
+        sleep(2)
+        self.back_ele.click()
+
